@@ -24,7 +24,7 @@ function browse() {
 # results in
 #   foo="bar"
 function oauth_reply_to_bash() {
-  tr '{},' \\n | sed -e 's/" : /=/' -e 's/^ *"//'
+  tr '{},' \\n | sed -E -e 's/" ?: /=/' -e 's/^ *"//'
 }
 
 # POSTs to Google accounts OAuth service to request token for a given
